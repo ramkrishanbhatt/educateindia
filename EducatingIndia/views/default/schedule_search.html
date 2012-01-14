@@ -1,0 +1,11 @@
+{{extend 'layout.html'}}
+<h1>Search schedules</h1>
+<h2>Search schedules according to following fileds</h2>
+<br/>
+{{=form}}
+{{if rows:}}
+  {{headers=dict((str(k),k.label) for k in db.t_schedule)}}
+  {{=SQLTABLE(rows,headers=headers)}}
+{{else:}}
+  {{=TAG.blockquote(T('No Data'))}}
+{{pass}}

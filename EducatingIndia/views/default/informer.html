@@ -1,0 +1,7 @@
+{{extend 'layout.html'}}
+<h2>You can contact with following peoples to get information to create today's new schedule</h2>
+<br>
+<h3>
+<ul>{{for t_inform in informs:}}
+    {{=LI('Name:   ', '          ', t_inform.name, '   ,Address:       ', t_inform.address, '     ,Contact Number:      ', t_inform.contact)}}
+{{pass}}</ul></h3>

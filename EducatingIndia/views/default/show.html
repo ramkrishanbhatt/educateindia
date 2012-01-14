@@ -1,0 +1,11 @@
+{{extend 'layout.html'}}
+<h2>{{=page.title}}</h2>
+{{import gluon.contrib.markdown}}
+{{=XML(page.experience, sanitize=True)}}
+<h2>Comment</h2>
+{{for comment in comments:}}
+    <p> {{=db.auth_user[comment.created_by].first_name}} on {{=comment.created_on}}
+            says <I>{{=comment.experience}}</i></p>
+{{pass}}
+<h2>Post a comment </h2>
+{{=form}}

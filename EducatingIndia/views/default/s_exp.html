@@ -1,0 +1,7 @@
+{{extend 'layout.html'}}
+<h1>Available user experiences</h1>
+<br>
+<ul>{{for page in pages:}}
+    {{=LI(A(page.title, _href=URL(r=request, f='show', args=page.id)
+        ))}}
+{{pass}}</ul>

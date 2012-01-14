@@ -1,0 +1,7 @@
+{{extend 'layout.html'}}
+<h2>You can attend the following schedules. These are in your area and according to language you prefer.</h2>
+<br>
+<h3>
+<ul>{{for t_schedule in informs:}}
+    {{=LI('   Area:       ', t_schedule.area, '     ,      ', t_schedule.city, '     ,Language Preferred:      ', t_schedule.language)}}
+{{pass}}</ul></h3>

@@ -1,0 +1,7 @@
+{{extend 'layout.html'}}
+
+<h2>View Schedule</h2>
+<br/>
+
+{{=form}}
+{{for t,f in db.t_schedule._referenced_by:}}{{if not t[-8:]=='_archive':}}[{{=A(t[2:],_href=URL('%s_select'%t[2:],args=(f,form.record.id)))}}]{{pass}}{{pass}}
