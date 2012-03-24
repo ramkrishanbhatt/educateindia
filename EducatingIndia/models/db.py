@@ -8,7 +8,7 @@ settings.email_sender = 'coniosam@gmail.com'
 settings.email_login = 'coniosam:sanjeevsajjan12<>?'
 settings.login_method = 'local'
 settings.login_config = ''
-
+#here i am making sample comment 
 if  not request.env.web2py_runtime_gae:            # if running on Google App Engine
     db = DAL('sqlite://storage.sqlite')    
 else:                                         # else use a normal relational database
